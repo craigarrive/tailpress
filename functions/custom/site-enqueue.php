@@ -44,6 +44,7 @@ function custom_styles() {
 
   // wp_enqueue_style( 'fancybox-style', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css', array(), null, false);
   wp_enqueue_style( 'tailpress', tailpress_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
+  wp_enqueue_style( 'slick-slider', tailpress_asset( 'css/slick-slider.css' ), array(), $theme->get( 'Version' ) );
   wp_enqueue_style( 'fa-style', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', array(), null, false );
   //wp_enqueue_style( 'gfont-style', '{GOOGLE FONT LINK}', array(), null, 'all' );
 
