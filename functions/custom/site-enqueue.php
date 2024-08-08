@@ -16,7 +16,7 @@ function custom_scripts() {
   // wp_enqueue_script( 'jq-fancybox', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js', array(), null, false ); 
   // wp_enqueue_script( 'backstretch-script', get_stylesheet_directory_uri() . '/js/vendor/backstretch.min.js', array(), null, true );
   // wp_enqueue_script( 'fancybox-script', get_stylesheet_directory_uri() . '/js/vendor/fancybox.min.js', array(), null, true );
-  // wp_enqueue_script( 'gmap-link', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAMBgtcb-xKZEBruW2xyol5bU6ZPt_mocA"', array(), null, true );
+  // wp_enqueue_script( 'gmap-link', 'https://maps.googleapis.com/maps/api/js?key=[ENTER API KEY]"', array(), null, true );
 
 }
 add_action( 'wp_enqueue_scripts', 'custom_scripts' );
