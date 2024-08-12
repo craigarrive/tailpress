@@ -19,7 +19,7 @@ require_once('functions/custom/site-enqueue.php');
 // require_once('functions/acf/acf-shortcodes.php');
 
 // CUSTOM FUNCTIONS
-// require_once('functions/wordpress/wordpress-custom.php');
+require_once('functions/custom/wordpress-custom.php');
 // require_once('functions/custom/svg-shortcode.php');
 // require_once('functions/custom/structured-data.php');
 require_once('functions/custom/custom-log-in.php');

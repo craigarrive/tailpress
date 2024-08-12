@@ -27,7 +27,7 @@
                             <?php the_custom_logo(); ?>
 						<?php } else { ?>
 							<a href="<?php echo get_bloginfo( 'url' ); ?>" class="font-extrabold text-lg uppercase">
-								<?php echo get_bloginfo( 'name' ); ?>
+								<img src="<?= get_stylesheet_directory_uri();?>/assets/logo.svg" alt="<?php echo get_bloginfo( 'name' ); ?>">
 							</a>
 
 							<p class="text-sm font-light text-gray-600">
