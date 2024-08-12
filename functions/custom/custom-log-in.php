@@ -13,12 +13,12 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
 
     body.login {
-        background: #F4C544;
+        background: #ff5800;
         /* background: linear-gradient(90deg, #F4C544 0%, #C45937 100%); */
     }
 
     #login h1 a, .login h1 a {
-        background-image: url('<?= get_stylesheet_directory_uri(); ?>/assets/svg/logo.svg');
+        background-image: url('<?= get_stylesheet_directory_uri(); ?>/assets/logo.svg');
         height:65px;
         width:320px;
         background-size: 320px 65px;
@@ -39,19 +39,19 @@
     .login form .input,
     .login form input[type=checkbox],
     .login input[type=text] {
-        border-color: #547B61 !important;
+        border-color: #000000 !important;
     }
 
     body.login.wp-core-ui .button, 
     .wp-core-ui .button-secondary {
-        background:  #547B61 !important;
+        background:  #000000 !important;
         border-color:  white !important;
         color: white !important;
     }
 
     body.login.wp-core-ui .button-primary {
-        background:  #547B61 !important;
-        border-color:  #547B61 !important;
+        background:  #000000 !important;
+        border-color:  #000000 !important;
         color: white !important;
     }
 
@@ -61,8 +61,8 @@
 
     body.login.wp-core-ui div.wp-pwd button.button-secondary {
         background: white !important;
-        border-color:  #547B61 !important;
-        color: #547B61 !important;
+        border-color:  #000000 !important;
+        color: #000000 !important;
     }
 
 </style>

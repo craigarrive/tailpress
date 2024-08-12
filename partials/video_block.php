@@ -1,13 +1,11 @@
 <?php 
 
-    $videoMaxWith = get_sub_field('max_width');
-
     // Load value.
     $video = get_sub_field('video');
 
     // Use preg_match to find iframe src.
     preg_match('/src="(.+?)"/', $video, $matches);
-    $src = $matches[1];
+    $src = $matches[0];
 
     // Add extra parameters to src and replace HTML.
     $params = array(
@@ -22,16 +20,22 @@
     // Add extra attributes to iframe HTML.
     $attributes = 'frameborder="0"';
     $video = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $video);
+
+    $videoMaxWith = get_sub_field('max_width');
+    $videoImageOverlay = get_sub_field('image_overlay');
 ?>
 <?php if($video) { ?>
-    <section class="embed-container h-auto overflow-hidden ratio-[16/9] relative <?= ($videoMaxWith) ? $videoMaxWith : "" ;?>">
-        <!-- image - start -->
-        <img src="https://images.unsplash.com/photo-1618004652321-13a63e576b80?auto=format&q=75&fit=crop&w=1500" loading="lazy" alt="Photo by Fakurian Design" class="absolute inset-0 h-full w-full object-cover object-center" />
-        <!-- image - end -->
+    <section class="embed-container h-auto overflow-hidden ratio-[16/9] relative mb-10 <?= ($videoMaxWith) ? $videoMaxWith : "" ;?>">
+        
+        <?php if($videoImageOverlay) { ?>
+            <!-- image - start -->
+            <img src="<?= $videoImageOverlay['url'];?>" loading="lazy" alt="<?= $videoImageOverlay['alt'];?>" class="absolute inset-0 h-full w-full object-cover object-center" />
+            <!-- image - end -->
+        <?php } ?>
 
         <!-- overlay - start -->
-        <div class="absolute inset-0 bg-indigo-500 mix-blend-multiply">
-            
+        <div class="absolute inset-0 bg-indigo-500 mix-blend-multiply flex items-center justify-center">
+            <i class="fa-solid fa-play text-white text-8xl cursor-pointer"></i>
         </div>
         <!-- overlay - end -->
 
@@ -61,6 +65,10 @@
             width: 100% !important;
             height: 100% !important;
             z-index: -1;
+        }
+
+        .fa-play {
+            color: #ffffff;
         }
     </style>
 <?php } ?>
