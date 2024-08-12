@@ -29,7 +29,7 @@
           <div class="flex gap-4">
 
             <?php foreach($socialMedia as $social) { ?>
-              <a href="<?= $social['link'];?>" target="_blank" class="text-gray-600 transition duration-100 hover:text-gray-500 active:text-gray-800">
+              <a href="<?= $social['link'];?>" target="_blank" class="text-gray-600 transition duration-100 hover:text-gray-500 active:text-gray-800 text-xl">
                 <?= $social['icon'];?>
               </a>
             <?php } ?>
@@ -46,7 +46,7 @@
         <div>
           <div class="mb-4 font-bold uppercase tracking-widest text-gray-600">Where to Find Us</div>
           <div class="flex flex-col gap-4">
-            <a href="https://www.google.com/maps/search/?api=1&query=<?= $parameteres; ?>" class="map flex items-center gap-x-2.5" target="_blank"><i class="fa-solid fa-map"></i> <?= $contactInfo['address'];?></a>
+            <a href="https://www.google.com/maps/search/?api=1&query=<?= $parameteres; ?>" class="flex items-center gap-x-2.5 text-gray-600 transition duration-100 hover:text-gray-800 active:text-gray-800" target="_blank"><i class="fa-solid fa-map text-xl"></i> <?= $contactInfo['address'];?></a>
           </div>
         </div>
         <!-- where to find us - end -->
@@ -59,11 +59,11 @@
             <div class="mb-4 font-bold uppercase tracking-widest text-gray-600">Contact</div>
             <div class="flex flex-col gap-4">
               <?php if($tel) { ?>
-                <a href="tel:<?= $tel;?>" class="map flex items-center gap-x-2.5"><i class="fa-solid fa-phone"></i> <?= $tel;?></a>
+                <a href="tel:<?= $tel;?>" class="flex items-center gap-x-2.5 text-gray-600 transition duration-100 hover:text-gray-800 active:text-gray-800"><i class="fa-solid fa-phone text-xl"></i> <?= $tel;?></a>
               <?php } ?>
 
               <?php if($email) { ?>
-                <a href="mailto:<?= $email;?>" class="map flex items-center gap-x-2.5"><i class="fa-solid fa-envelope"></i> <?= $email;?></a>
+                <a href="mailto:<?= $email;?>" class="flex items-center gap-x-2.5 text-gray-600 transition duration-100 hover:text-gray-800 active:text-gray-800"><i class="fa-solid fa-envelope text-xl"></i> <?= $email;?></a>
               <?php } ?>
             </div>
           </div>
